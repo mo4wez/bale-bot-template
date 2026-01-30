@@ -1,17 +1,24 @@
-# bale-bot-template
+# 🚀 Balethon Bot Template
 
+A modular, scalable, and clean boilerplate for building bots on the **Bale Messenger** platform using the [Balethon](https://github.com/balethon/balethon) library.
+
+## 📂 Project Structure
+
+This project follows a modular directory layout to ensure high maintainability as your bot grows:
+
+```text
 my_bale_bot/
-├── bot/                # Main package for the bot
-│   ├── __init__.py     # Initializes the bot client
-│   ├── config.py       # Configuration and Environment variables
-│   ├── handlers/       # Directory for all message/event handlers
+├── bot/                # Core bot logic
+│   ├── __init__.py     # Client initialization
+│   ├── config.py       # Configuration & Environment loading
+│   ├── handlers/       # Message and event logic
 │   │   ├── __init__.py
-│   │   ├── start.py    # Handler for /start command
-│   │   └── echo.py     # Simple echo logic
-│   ├── plugins/        # Optional: For modular extensions
-│   └── utils/          # Helper functions (DB connections, validators)
-├── data/               # Persistent data (SQLite, JSON, etc.)
-├── .env                # Bot Token and sensitive keys (STRICTLY PRIVATE)
-├── .gitignore          # Files to ignore (like .env and __pycache__)
-├── requirements.txt    # List of dependencies
-└── main.py             # Entry point to run the bot
+│   │   ├── start.py    # /start command handler
+│   │   └── echo.py     # General message logic
+│   ├── plugins/        # Modular extensions & Middlewares
+│   └── utils/          # Database helpers & utility functions
+├── data/               # Persistent storage (SQLite, Logs, etc.)
+├── .env                # Private API Tokens (Do not commit!)
+├── .gitignore          # Files ignored by Git
+├── requirements.txt    # Project dependencies
+└── main.py             # Application entry point
